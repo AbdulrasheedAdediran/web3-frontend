@@ -74,8 +74,8 @@ const MyStake = ({
         <form onSubmit={onClickGetAddress} className={Styles.form3}>
           <input
             type="text"
-            placeholder="input address"
-            className={Styles.input}
+            placeholder="Enter address: 0x*****"
+            className={Styles.input3}
             value={addreesInput}
             onChange={onChangeInput}
             id="getAddress"
