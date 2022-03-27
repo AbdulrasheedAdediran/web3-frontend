@@ -1,9 +1,12 @@
 .root {
-  margin-top: 5rem;
-  padding: 4rem;
+  margin-top: 2.5rem;
+  padding: 2rem;
   background-color: #eee;
   box-shadow: 0.5rem 0.5rem 10rem rgb(172, 169, 169);
   border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
 }
 
 .heading {
@@ -22,6 +25,19 @@
 
 .form {
   margin-top: 1.5rem;
+}
+.form3 {
+  margin-top: 0;
+}
+
+.address {
+  background-color: rgb(255, 196, 0);
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.result {
+  margin-top: 1rem;
 }
 
 .input {

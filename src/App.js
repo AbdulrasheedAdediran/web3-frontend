@@ -40,7 +40,7 @@ function App() {
 
   // modified
   // all stake history data displayed on the history table
-  const [userTotal, setUserTotal] = useState(null);
+  const [userTotal, setUserTotal] = useState([]);
 
   // helper function for getting the matic and token balance, given an address
   const getAccountDetails = async (address) => {
@@ -229,7 +229,7 @@ function App() {
     if (timeDifference >= 259200) {
       const reward = 0.0000000386 * timeDifference * stake;
       setRewardAmount(reward.toFixed(3));
-    } else setRewardAmount("00 : 00");
+    } else setRewardAmount("00.00");
   }; // modified end
 
   // A function that handles staking
@@ -306,10 +306,15 @@ function App() {
       BRTTokenAbi,
       customProvider
     );
-    const userReward = await BRTContractInstance.getStakedByAddress(
+    const userReward = await BRTContractInstance.getStakeByAddress(
       addressInput
     );
-    setUserTotal(utils.formatUnits(userReward.stakeAmount, 18));
+
+    setUserTotal({
+      account: userReward.staker.toString(),
+      amount: utils.formatUnits(userReward.stakeAmount, 18),
+      time: formatDate(userReward.time),
+    });
   };
 
   return (
@@ -331,7 +336,7 @@ function App() {
           stakeAmount={stakeAmount}
           rewardAmount={rewardAmount}
           connected={connected}
-          getClickAddress={onClickWithdraw}
+          onClickGetAddress={onClickGetAddress}
         />
         <StakeHistory stakeData={stateHistory} />
       </main>
