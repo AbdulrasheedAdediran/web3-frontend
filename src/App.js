@@ -171,6 +171,7 @@ function App() {
     window.ethereum.on("connect", eagerConnect);
     window.ethereum.on("accountsChanged", handleAccountChanged);
     window.ethereum.on("chainChanged", handleChainChanged);
+    /* eslint-disable */
   }, []);
 
   const connectWallet = async () => {
