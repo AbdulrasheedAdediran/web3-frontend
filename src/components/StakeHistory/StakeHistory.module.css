@@ -13,7 +13,7 @@
   overflow-y: scroll;
 }
 .table_header {
-  background-color: rgb(180, 14, 3);
+  background-color: rgba(1, 6, 37, 0.815);
   color: white;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;

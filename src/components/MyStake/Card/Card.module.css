@@ -1,21 +1,21 @@
 .root {
-    padding: 1.5rem;
-    background-color: #fff;
-    border-radius: .3rem;
-    width: 12rem;
-    margin-right: 2rem
+  padding: 1.5rem;
+  background-color: rgba(1, 6, 37, 0.815);
+  border-radius: 0.3rem;
+  width: 12rem;
+  margin-right: 2rem;
 }
 
 .card_title {
-    display: block;
-    white-space: nowrap;
-    margin-bottom: 1.2rem;
-    color: #999;
+  display: block;
+  white-space: nowrap;
+  margin-bottom: 1.2rem;
+  color: #999;
 }
 
 .card_value {
-    display: block;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: brown;
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #999;
 }
