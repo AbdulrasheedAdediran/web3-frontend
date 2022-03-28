@@ -24,3 +24,6 @@
   border-radius: 0.5rem;
   padding: 0.8rem 1rem;
 }
+.connect_btn:hover {
+  background-color: rgba(0, 134, 29, 0.5);
+}

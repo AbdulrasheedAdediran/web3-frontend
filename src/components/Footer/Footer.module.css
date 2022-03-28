@@ -1,12 +1,13 @@
 .root {
-    width: 100%;
-    padding: 5rem;
-    text-align: center;
-    background-color: rgb(209, 206, 206);
-    font-size: 1.5rem;
-    font-weight: 500;
+  width: 100%;
+  padding: 5rem;
+  text-align: center;
+  background-color: rgba(1, 6, 37, 0.815);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .text {
-    opacity: .5;
+  opacity: 0.5;
 }

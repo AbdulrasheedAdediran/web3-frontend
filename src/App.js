@@ -52,6 +52,7 @@ function App() {
         BRTTokenAbi,
         provider
       );
+      getStake();
       const userBRTBalance = await BRTContractInstance.balanceOf(address);
       return { userBRTBalance, userMaticBal };
     } catch (err) {
