@@ -18,11 +18,11 @@
 }
 
 .token_bal {
-  background-color: rgb(199, 236, 224);
-  color: rgba(1, 6, 37, 0.815);
+  background-color: rgba(1, 6, 37, 0.815);
+  color: #999;
 }
 
 .matic_bal {
-  background-color: rgb(180, 14, 3);
-  color: #fff;
+  background-color: rgba(1, 6, 37, 0.815);
+  color: #999;
 }
