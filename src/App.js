@@ -152,7 +152,7 @@ function App() {
     });
 
     setStakeHistory(history);
-    console.log(history)
+
     BRTContractInstance.on("stakeEvent", (account, amount, time, type) => {
       const newStake = {
         amount: amount,
