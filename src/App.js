@@ -7,7 +7,7 @@ import { formatDate } from "./utils/helpers";
 import Footer from "./components/Footer/Footer";
 import { ethers, utils, Contract } from "ethers";
 import BRTTokenAbi from "./utils/web3/abi.json";
-const BRTTokenAddress = "0x29B41DA9E429B7E9124493E114dbF921089A4c11";
+const BRTTokenAddress = "0x3E5fcDF1A1b79A20843160d8F79E731DEd8a5D3B";
 
 function App() {
   // a flag for keeping track of whether or not a user is connected
@@ -66,7 +66,7 @@ function App() {
       const networkId = await window.ethereum.request({
         method: "eth_chainId",
       });
-      if (Number(networkId) !== 4) return;
+      if (Number(networkId) !== 80001) return;
       const accountDetails = await getAccountDetails(accounts[0]);
 
       setUserInfo({
@@ -87,7 +87,7 @@ function App() {
 
   // handler for handling chain/network changed
   const handleChainChanged = async (chainid) => {
-    if (Number(chainid) !== 4) {
+    if (Number(chainid) !== 80001) {
       setConnected(false);
       setUserInfo({
         matic_balance: 0,
@@ -115,7 +115,7 @@ function App() {
   // an handler to eagerly connect user and fetch their data
   const eagerConnect = async () => {
     const networkId = await window.ethereum.request({ method: "eth_chainId" });
-    if (Number(networkId) !== 4) return;
+    if (Number(networkId) !== 80001) return;
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const accounts = await provider.listAccounts();
     if (!accounts.length) return;
