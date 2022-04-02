@@ -152,7 +152,7 @@ function App() {
     });
 
     setStakeHistory(history);
-
+    console.log(history)
     BRTContractInstance.on("stakeEvent", (account, amount, time, type) => {
       const newStake = {
         amount: amount,
@@ -272,7 +272,7 @@ function App() {
 
   const onClickWithdraw = async (e) => {
     e.preventDefault();
-    if (withdrawInput < 0) return alert("Please enter a valid amount");
+    if (withdrawInput < 0) return alert("you cannot withdraw less than 0 BRT");
 
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const signer = provider.getSigner();
@@ -283,9 +283,14 @@ function App() {
     );
     const weiValue = utils.parseEther(withdrawInput);
     const unStakeTx = await BRTContractInstance.withdraw(weiValue);
+    // const stakeTxHash = await provider.getTransaction(stakeTx.hash);
     await unStakeTx.wait();
+    // console.log(await BRTContractInstance.myStake());
     await getStake();
     setWithdrawInput("");
+    // const address = response.events[1].args[0];
+    // const amountStaked = response.events[1].args[1].toString();
+    // const time = response.events[1].args[2].toString();
 
     const accounts = await provider.listAccounts();
     if (!accounts.length) return;
@@ -296,6 +301,7 @@ function App() {
       address: accounts[0],
     });
     setConnected(true);
+    console.log("unstaking...........", withdrawInput);
   };
 
   const onClickGetAddress = async (e) => {
