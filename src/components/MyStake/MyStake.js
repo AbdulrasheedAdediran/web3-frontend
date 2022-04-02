@@ -65,7 +65,7 @@ const MyStake = ({
               })}
               disabled={!connected}
             >
-              Unstake
+              Withdraw
             </button>
           </form>
         </div>
