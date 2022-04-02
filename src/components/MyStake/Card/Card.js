@@ -5,7 +5,7 @@ const Card = ({cardKey, cardValue}) => {
   return (
     <div className={Styles.root}>
         <span className={Styles.card_title}>{cardKey}</span>
-        <span className={Styles.card_value}>{cardValue ? `${cardValue} BRT` : "-- : --"}</span>
+        <span className={Styles.card_value}>{cardValue ? `${cardValue} W3B` : "-- : --"}</span>
     </div>
   )
 }

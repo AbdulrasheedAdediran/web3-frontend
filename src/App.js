@@ -7,7 +7,7 @@ import { formatDate } from "./utils/helpers";
 import Footer from "./components/Footer/Footer";
 import { ethers, utils, Contract } from "ethers";
 import BRTTokenAbi from "./utils/web3/abi.json";
-const BRTTokenAddress = "0x169E82570feAc981780F3C48Ee9f05CED1328e1b";
+const BRTTokenAddress = "0x12cCa91846018901D3A5367b4b7d2c641D9Ab1B7";
 
 function App() {
   // a flag for keeping track of whether or not a user is connected
